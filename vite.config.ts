@@ -1,23 +1,15 @@
-import path from 'path';
-import { defineConfig, loadEnv } from 'vite';
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-
-export default defineConfig(({ mode }) => {
-    const env = loadEnv(mode, '.', '');
-    return {
-      server: {
-        port: 3000,
-        host: '0.0.0.0',
-      },
-      plugins: [],
-      define: {
-        'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
-      },
-      resolve: {
-        alias: {
-          '@': path.resolve(__dirname, '.'),
-        }
-      }
-    };
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  // This ensures assets are linked relatively (e.g., "./style.css" instead of "/style.css")
+  // allowing the site to work on GitHub Pages subdirectories.
+  base: './', 
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+  },
+  publicDir: 'public', // Files in this folder will be served at the root
 });

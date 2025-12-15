@@ -113,12 +113,19 @@ export const CONTENT: Record<string, Content> = {
   }
 };
 
+// NOTE: To display your own images:
+// 1. Create a folder named "public" in your project root.
+// 2. Inside "public", create a folder named "images".
+// 3. Add your image files there (e.g., project-1.jpg).
+// 4. Update the 'image' path below to match your filename: 'images/project-1.jpg'.
+
 export const PROJECTS: Project[] = [
   {
     id: 1,
     title: 'Neon Genesis',
     category: 'Design',
-    image: 'https://images.unsplash.com/photo-1633511090164-b43840ea1607?q=80&w=2560&auto=format&fit=crop',
+    // Example: Replace with 'images/neon-genesis.jpg' once you upload the file
+    image: 'images/project-1.jpg',
     description: {
       en: 'Surrealist composition using advanced masking techniques.',
       pt: 'Composição surrealista usando técnicas avançadas de máscara.',
@@ -130,7 +137,7 @@ export const PROJECTS: Project[] = [
     id: 2,
     title: 'Kinetic Flow',
     category: 'Video',
-    image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2560&auto=format&fit=crop',
+    image: 'images/project-2.jpg',
     description: {
       en: 'Music video color grading and rhythmic editing.',
       pt: 'Color grading de videoclipe e edição rítmica.',
@@ -142,7 +149,7 @@ export const PROJECTS: Project[] = [
     id: 3,
     title: 'Cyberpunk Asset',
     category: '3D',
-    image: 'https://images.unsplash.com/photo-1614850523296-d8c1af93d400?q=80&w=2560&auto=format&fit=crop',
+    image: 'images/project-3.jpg',
     description: {
       en: 'Hard surface modeling for game environment.',
       pt: 'Modelagem hard surface para ambiente de jogo.',
@@ -154,7 +161,7 @@ export const PROJECTS: Project[] = [
     id: 4,
     title: 'Void Walker',
     category: 'VFX',
-    image: 'https://images.unsplash.com/photo-1515630278258-407f66498911?q=80&w=2560&auto=format&fit=crop',
+    image: 'images/project-4.jpg',
     description: {
       en: 'Motion tracking and particle effects composition.',
       pt: 'Motion tracking e composição de efeitos de partículas.',
@@ -166,7 +173,7 @@ export const PROJECTS: Project[] = [
     id: 5,
     title: 'Ethereal Edit',
     category: 'Video',
-    image: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2560&auto=format&fit=crop',
+    image: 'images/project-5.jpg',
     description: {
       en: 'Commercial montage with fluid transitions.',
       pt: 'Montagem comercial com transições fluidas.',

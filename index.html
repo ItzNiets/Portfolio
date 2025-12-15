@@ -105,12 +105,16 @@
     "@react-three/fiber": "https://esm.sh/@react-three/fiber@8.15.16?external=react,react-dom,three",
     "@react-three/drei": "https://esm.sh/@react-three/drei@9.99.0?external=react,react-dom,three,@react-three/fiber",
     "maath": "https://esm.sh/maath@0.10.7?external=react,three",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "vite": "https://esm.sh/vite@^7.3.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2"
   }
 }
 </script>
 </head>
   <body class="bg-black text-white selection-invert">
     <div id="root"></div>
+    <!-- Updated to relative path ./index.tsx for GitHub Pages compatibility -->
+    <script type="module" src="./index.tsx"></script>
   </body>
 </html>
