@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rafael Alves | Visual Architect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Space Grotesk', 'sans-serif'],
+              display: ['Syne', 'sans-serif'],
+            },
+            colors: {
+              purple: {
+                400: '#a78bfa',
+                500: '#8b5cf6',
+                600: '#7c3aed',
+                900: '#4c1d95',
+                950: '#1a0b2e',
+              },
+              neon: {
+                magenta: '#E100FF',
+                violet: '#7F00FF',
+              },
+              black: '#050505',
+              charcoal: '#1a1a1a',
+            },
+            animation: {
+              'spin-slow': 'spin 12s linear infinite',
+              'pulse-fast': 'pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'glitch': 'glitch 2s infinite',
+              'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+            },
+            keyframes: {
+              glitch: {
+                '0%': { transform: 'translate(0)' },
+                '2%': { transform: 'translate(-2px, 2px)' },
+                '4%': { transform: 'translate(-2px, -2px)' },
+                '6%': { transform: 'translate(2px, 2px)' },
+                '8%': { transform: 'translate(2px, -2px)' },
+                '10%': { transform: 'translate(0)' },
+                '100%': { transform: 'translate(0)' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(40px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #050505;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #7F00FF;
+      }
+
+      body {
+        cursor: none;
+        background-color: #050505;
+        overflow-x: hidden;
+      }
+      
+      @media (max-width: 768px) {
+        body {
+          cursor: auto;
+        }
+      }
+      
+      .selection-invert::selection {
+        background: #7F00FF; /* Changed to Neon Purple */
+        color: #fff;
+        text-shadow: 0 0 10px #7F00FF;
+      }
+
+      .mix-blend-exclusion {
+        mix-blend-mode: exclusion;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@18.2.0",
+    "react/": "https://esm.sh/react@18.2.0/",
+    "react-dom": "https://esm.sh/react-dom@18.2.0",
+    "react-dom/client": "https://esm.sh/react-dom@18.2.0/client",
+    "lucide-react": "https://esm.sh/lucide-react@0.294.0?external=react",
+    "three": "https://esm.sh/three@0.160.0",
+    "@react-three/fiber": "https://esm.sh/@react-three/fiber@8.15.16?external=react,react-dom,three",
+    "@react-three/drei": "https://esm.sh/@react-three/drei@9.99.0?external=react,react-dom,three,@react-three/fiber",
+    "maath": "https://esm.sh/maath@0.10.7?external=react,three",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+  <body class="bg-black text-white selection-invert">
+    <div id="root"></div>
+  </body>
+</html>
